@@ -2,6 +2,8 @@ package com.coding.exercise.bankapp.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,6 +28,9 @@ import io.swagger.annotations.ApiResponses;
 @Api(tags = { "Customer REST endpoints" })
 public class CustomerController {
 
+	private static final Logger LOGGER=LoggerFactory.getLogger(CustomerController.class);
+	 
+
 	@Autowired
 	private BankingServiceImpl bankingService;
 
@@ -47,8 +52,8 @@ public class CustomerController {
 			@ApiResponse(code = 500, message = "Internal Server Error") })
 
 	public ResponseEntity<Object> addCustomer(@RequestBody CustomerDetails customer) {
-
-		return bankingService.addCustomer(customer);
+		//ResponseEntity<t> t=
+		return  bankingService.addCustomer(customer);
 	}
 
 	@GetMapping(path = "/{customerNumber}")

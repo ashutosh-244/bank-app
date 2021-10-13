@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: BankApp
+Implementation-Version: 1.0.0
+Built-By: Ashutosh
+Implementation-Vendor-Id: com.coding.exercise
+Build-Jdk: 1.8.0-262
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/bank-app
+Created-By: Maven Integration for Eclipse
+
