@@ -43,7 +43,7 @@ public class BankingApplicationTests {
     	            json= reader.lines().collect(Collectors.joining(System.lineSeparator()));
     	        }
     	    }
-    	log.debug("json");
+    	log.debug(" added jenkins job");
       	String newRide = "{\"name\":\"Monorail\",\"description\":\"Sedate travelling ride.\",\"thrillFactor\":2,\"vomitFactor\":1}";
         mockMvc.perform(MockMvcRequestBuilders.post("/customers/add")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -54,7 +54,8 @@ public class BankingApplicationTests {
     }
     @Test
     public void addsCustomer1001() throws Exception {
-        
+    	log.debug(" added jenkins job");
+         
     	ClassLoader classLoader = getClass().getClassLoader();
     	String json="";
     	try (InputStream is = classLoader.getResourceAsStream("AddCustomer_1001.json")) {
@@ -64,7 +65,8 @@ public class BankingApplicationTests {
     	            json= reader.lines().collect(Collectors.joining(System.lineSeparator()));
     	        }
     	    }
-    	log.debug("json");
+    	log.debug(" added jenkins job");
+        
       	String newRide = "{\"name\":\"Monorail\",\"description\":\"Sedate travelling ride.\",\"thrillFactor\":2,\"vomitFactor\":1}";
         mockMvc.perform(MockMvcRequestBuilders.post("/customers/add")
                 .contentType(MediaType.APPLICATION_JSON)
